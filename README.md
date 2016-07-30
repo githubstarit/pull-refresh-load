@@ -11,15 +11,48 @@
 * 依赖Zepto或者jquery库
 * 在html中引入 css/pull.css和js/pull.js
 * 通过new Pull(options)来初始化Pull组件
+* Html结构参考demo/demo.html
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>下拉刷新/上拉加载 demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel='stylesheet' href='../css/pull.css'>
+    <link rel='stylesheet' href='./demo.css' inline>
+
+</head>
+
+<body>
+    <div id="scroll" class="scroll">
+        <!-- pull down 元素将插入到这里 -->
+        <div id="list" class="device3d">
+            <!-- 列表里的元素插入到这里 -->
+        </div>
+        <!-- pull up 元素将插入到这里 -->
+    </div>
+
+    <script type='text/javascript' src='../plugins/zepto.min.js'></script>
+    <script type='text/javascript' src='../js/pull.js'></script>
+    <script type='text/javascript' src='./demo.js' inline></script>
+</body>
+
+</html>
+
+```
+
+* Pull组件的API使用参考 demo/demo.js
 
 
-# options配置参数
+# new Pull(options)中的构造参数options的字段如下
 * scroller ： 滚动区域的dom
 * scrollArea ： 滚动容器的dom
-* pullDown ：下拉刷新监听  pullDown函数格式  function(pull){}
-* pullUp ： 上拉加载监听   pullDown函数格式  function(pull){}
+* pullDown ：下拉刷新监听  pullDown函数格式function(pull){}
+* pullUp ： 上拉加载监听   pullDown函数格式function(pull){}
 
-# 方法
+# pull实例对象的方法
 * refresh(state) : 用于刷新滚动区域和上下拉条的状态, state参数格式如下
 ```
 {

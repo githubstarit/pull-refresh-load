@@ -6,6 +6,10 @@
 总结了下，不能自己通过touch事件来模拟滚动条，因为在旧设备和大数据量的情况下回出现兼容问题。而且类似iscroll的框架太重，就为了下拉刷新和上来加载就自己模拟滚动，不是很好。
 总结了下就自己简单封装一个。
 
+# demo在线预览
+* http://cdn.ouchuanyu.com/pull/demo/demo.html
+* ![](http://cdn.ouchuanyu.com/pull/url.jpg)
+
 # 使用方式
 
 * 依赖Zepto或者jquery库
